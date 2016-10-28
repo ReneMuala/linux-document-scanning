@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdio.h>
+#include <stdint.h>
 
-#include "_stdint.h"
 #include "sane/sanei.h"
 #include "sane/saneopts.h"
 
