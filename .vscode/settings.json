@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "hello_sane.h": "c",
+        "saneopts.h": "c"
+    }
+}

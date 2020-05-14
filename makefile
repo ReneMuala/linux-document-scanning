@@ -1,4 +1,4 @@
-SANE_INCLUDE=/home/xiao/sane/include
+SANE_INCLUDE=/usr/local/include/
 SANE_LIB=-lsane
 SOURCE=main.c hello_sane.c
 TARGET=hellosane

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include "sane/sanei.h"
+#include "sane/sane.h"
 #include "sane/saneopts.h"
 
 #ifndef PATH_MAX

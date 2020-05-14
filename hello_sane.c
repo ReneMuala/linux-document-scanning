@@ -20,6 +20,35 @@ static int verbose;
 static int progress = 0;
 static SANE_Byte *buffer;
 static size_t buffer_size;
+static void *
+advance(Image * image)
+{
+  if (++image->x >= image->width)
+    {
+      image->x = 0;
+      if (++image->y >= image->height || !image->data)
+	{
+	  size_t old_size = 0, new_size;
+
+	  if (image->data)
+	    old_size = image->height * image->width;
+
+	  image->height += STRIP_HEIGHT;
+	  new_size = image->height * image->width;
+
+	  if (image->data)
+	    image->data = realloc (image->data, new_size);
+	  else
+	    image->data = malloc (new_size);
+	  if (image->data)
+	    memset (image->data + old_size, 0, new_size - old_size);
+	}
+    }
+  if (!image->data)
+    fprintf (stderr, "can't allocate image buffer (%dx%d)\n",
+	     image->width, image->height);
+  return image->data;
+}
 
 static void
 auth_callback (SANE_String_Const resource,
