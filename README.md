@@ -1,6 +1,4 @@
-# Simple Linux SANE Scanning Application in C
-
-The sample demonstrates how to implement a simple document scanning application on Linux.
+# Simple Linux/MacOS SANE Scanning Application in C
 
 ## Getting Started
 
@@ -14,7 +12,6 @@ The sample demonstrates how to implement a simple document scanning application 
     sudo make install
     ```
 
-
 3. Build the project:
 
     ```
@@ -24,7 +21,7 @@ The sample demonstrates how to implement a simple document scanning application 
 4. Run the application:
  
     ```
-    sudo ./hellosane
+    sudo ./bin/dedicated-pnm-scanner <filename.pnm>
     ```
 
 ## Reference
