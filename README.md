@@ -21,7 +21,7 @@
 4. Run the application:
  
     ```
-    sudo ./bin/dedicated-pnm-scanner <filename.pnm>
+    sudo ./bin/dedicated-pnm-scanner <filename>
     ```
 
 ## Reference
