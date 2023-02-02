@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "hello_sane.h": "c",
-        "saneopts.h": "c"
+        "saneopts.h": "c",
+        "stdlib.h": "c",
+        "sane.h": "c"
     }
 }

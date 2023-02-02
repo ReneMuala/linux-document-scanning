@@ -1,10 +1,10 @@
 SANE_INCLUDE=/usr/local/include/
 SANE_LIB=-lsane
-SOURCE=main.c hello_sane.c
-TARGET=hellosane
+SOURCE=src/main.c src/hello_sane.c
+TARGET=bin/dedicated-pnm-scanner
 
 $(TARGET): $(SOURCE)
-	gcc -o hellosane -I$(SANE_INCLUDE) $(SOURCE) $(SANE_LIB)
+	gcc -o $(TARGET) -I$(SANE_INCLUDE) $(SOURCE) $(SANE_LIB)
 
 clean:
 	rm $(TARGET)
