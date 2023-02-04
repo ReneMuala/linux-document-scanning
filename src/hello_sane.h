@@ -17,7 +17,7 @@ extern "C" {
 #endif
 
 // Initialize SANE
-void init();
+void init_sane();
 // Get all devices
 SANE_Status get_devices(const SANE_Device ***device_list);
 // Open a device
@@ -29,7 +29,7 @@ void cancel_scan(SANE_Handle sane_handle);
 // Close SANE device
 void close_device(SANE_Handle sane_handle);
 // Release SANE resources
-void exit();
+void exit_sane();
 
 #ifdef __cplusplus
 }

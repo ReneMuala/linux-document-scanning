@@ -380,7 +380,7 @@ SANE_Status do_scan(const char *fileName)
 }
 
 // Initialize SANE
-void init()
+void init_sane()
 {
     SANE_Int version_code = 0;
 	sane_init (&version_code, auth_callback);
@@ -438,7 +438,7 @@ void close_device(SANE_Handle sane_handle)
 }
 
 // Release SANE resources
-void exit(){
+void exit_sane(){
     sane_exit();
 }
 

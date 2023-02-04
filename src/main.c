@@ -9,7 +9,7 @@ int main(int argc, const char ** argv)
     }
     // 1. initialize SANE
     printf("Init\n");
-    init();
+    init_sane();
 
      
     do {
@@ -46,7 +46,8 @@ int main(int argc, const char ** argv)
         close_device(sane_handle);
     } while(0)
         ;
-
+	
     // 6. release resources
+    exit_sane();
     printf("Exit\n");
 }
